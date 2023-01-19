@@ -1,0 +1,174 @@
+snippet ii "inline math" w
+\\($1\\)$0
+endsnippet
+
+snippet dd "display math" w
+\[$1\]$0
+endsnippet
+
+snippet nl "newline" w
+\vspace{${1:3}mm}\newline
+endsnippet
+
+snippet mbb "mathbb" w
+\mathbb{$1}$0
+endsnippet
+
+snippet mbf "mathbf" w
+\mathbf{$1}$0
+endsnippet
+
+snippet mcl "mathcal" w
+\mathcal{$1}$0
+endsnippet
+
+snippet bs "boldsymbol" w
+\boldsymbol{$1}$0
+endsnippet
+
+snippet P "Probability" w
+\mathbb{P}($1)$0
+endsnippet
+
+snippet E "Probability" w
+\mathbb{E}($1)$0
+endsnippet
+
+snippet Var "Variance" w
+\text{Var}($1)$0
+endsnippet
+
+snippet Cov "Covariance" w
+\text{Cov}($1)$0
+endsnippet
+
+snippet corr "Correlation" w
+\text{corr}($1)$0
+endsnippet
+
+snippet L "Laplace transform" w
+\mathcal{L}\\{$1\\}$0
+endsnippet
+
+snippet cvs "an character vector in vector sequence" w
+\mathbf{$1}^{($2)}$0
+endsnippet
+
+snippet svs "an symbol vector in vector sequence" w
+\boldsymbol{$1}^{($2)}$0
+endsnippet
+
+snippet tb "textbf" w
+\textbf{$1}$0
+endsnippet
+
+snippet hat "hat" w
+\hat{$1}$0
+endsnippet
+
+snippet fp "framed minipage" w
+\fbox{\begin{minipage}{${1:1}\textwidth}
+		$2
+\end{minipage}}$0
+endsnippet
+
+snippet rmk "remark" w
+\begin{remark}
+	$1
+\end{remark}$0
+endsnippet
+
+snippet abs "absolute value" w
+\abs{$1}$0
+endsnippet
+
+snippet tx "text" w
+\text{$1}$0
+endsnippet
+
+snippet arg "argument" w
+\text{arg}($1)$0
+endsnippet
+
+snippet Arg "argument" w
+\text{Arg}($1)$0
+endsnippet
+
+snippet Re "real part of complex numbers" w
+\text{Re}($1)$0
+endsnippet
+
+snippet Im "imaginary part of complex numbers" w
+\text{Im}($1)$0
+endsnippet
+
+snippet vec "vector" w
+\vec{$1}$0
+endsnippet
+
+snippet dot "dot" w
+\dot{$1}$0
+endsnippet
+
+snippet span "span" w
+\langle$1\rangle$0
+endsnippet
+
+snippet note "note" w
+\documentclass[11pt]{article}
+\usepackage{
+	amsmath, amsthm, amsfonts, bm, listings, enumitem, geometry, titlesec,
+	array, makecell, caption, subcaption, graphicx, float, hyperref, mdframed,
+	mathtools
+}
+\usepackage[flushleft]{threeparttable}
+\usepackage[table]{xcolor}
+\geometry{margin=0.8in}
+%\graphicspath{ {./DE_imgs/} }
+
+\newtheoremstyle{break}% name
+	{0mm}%         Space above, empty = \`usual value'
+	{}%         Space below
+	{\itshape}% Body font
+	{}%         Indent amount (empty = no indent, \parindent = para indent)
+	{\bfseries}% Thm head font
+	{.}%        Punctuation after thm head
+	{\newline}% Space after thm head: \newline = linebreak
+	{}%         Thm head spec
+
+\theoremstyle{break}
+%\newtheorem{theorem}{Theorem}[subsection]
+\newmdtheoremenv{theorem}{Theorem}[subsection]
+%\newtheorem{definition}{Definition}[subsection]
+\newmdtheoremenv{definition}{Definition}[subsection]
+\newtheorem{remark}{Remark}[subsection]
+\newtheorem{lemma}{Lemma}[subsection]
+\newtheorem{prop}{Proposition}[subsection]
+
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}%
+\DeclarePairedDelimiter\norm{\lVert}{\rVert}%
+
+% Swap the definition of \abs* and \norm*, so that \abs
+% and \norm resizes the size of the brackets, and the
+% starred version does not.
+\makeatletter
+\let\oldabs\abs
+\def\abs{\@ifstar{\oldabs}{\oldabs*}}
+%
+\let\oldnorm\norm
+\def\norm{\@ifstar{\oldnorm}{\oldnorm*}}
+\makeatother
+
+
+\title{$1}
+\author{Yuanhao JIANG}
+\date{}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+
+$0
+\end{document}
+endsnippet
