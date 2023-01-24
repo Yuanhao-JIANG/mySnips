@@ -26,7 +26,15 @@ snippet bs "boldsymbol" w
 \boldsymbol{$1}$0
 endsnippet
 
-snippet P "Probability" w
+snippet R "Real number" w
+\mathbb{R}$0
+endsnippet
+
+snippet C "Complex number" w
+\mathbb{C}$0
+endsnippet
+
+snippet Pr "Probability" w
 \mathbb{P}($1)$0
 endsnippet
 
@@ -114,12 +122,16 @@ snippet span "span" w
 \langle $1\rangle$0
 endsnippet
 
+snippet deg "degree of polynomial" w
+\text{deg}($1)$0
+endsnippet
+
 snippet note "note" w
 \documentclass[11pt]{article}
 \usepackage{
-	amsmath, amsthm, amsfonts, bm, listings, enumitem, geometry, titlesec,
-	array, makecell, caption, subcaption, graphicx, float, hyperref, mdframed,
-	mathtools
+	amsmath, amsthm, amssymb, amsfonts, bm, listings, enumitem, geometry,
+	titlesec, array, makecell, caption, subcaption, graphicx, float, hyperref,
+	mdframed, mathtools
 }
 \usepackage[flushleft]{threeparttable}
 \usepackage[table]{xcolor}
@@ -143,6 +155,7 @@ snippet note "note" w
 \newmdtheoremenv{definition}{Definition}[subsection]
 \newtheorem{remark}{Remark}[subsection]
 \newtheorem{lemma}{Lemma}[subsection]
+\newtheorem{corollary}{Corollary}[subsection]
 \newtheorem{prop}{Proposition}[subsection]
 
 \DeclarePairedDelimiter\abs{\lvert}{\rvert}%
