@@ -43,15 +43,15 @@ snippet E "Probability" w
 endsnippet
 
 snippet Var "Variance" w
-\text{Var}($1)$0
+\Var($1)$0
 endsnippet
 
 snippet Cov "Covariance" w
-\text{Cov}($1)$0
+\Cov($1)$0
 endsnippet
 
 snippet corr "Correlation" w
-\text{corr}($1)$0
+\corr($1)$0
 endsnippet
 
 snippet L "Laplace transform" w
@@ -95,19 +95,19 @@ snippet tx "text" w
 endsnippet
 
 snippet arg "argument" w
-\text{arg}($1)$0
+\arg($1)$0
 endsnippet
 
 snippet Arg "argument" w
-\text{Arg}($1)$0
+\Arg($1)$0
 endsnippet
 
 snippet Re "real part of complex numbers" w
-\text{Re}($1)$0
+\Re($1)$0
 endsnippet
 
 snippet Im "imaginary part of complex numbers" w
-\text{Im}($1)$0
+\Im($1)$0
 endsnippet
 
 snippet vec "vector" w
@@ -123,7 +123,15 @@ snippet span "span" w
 endsnippet
 
 snippet deg "degree of polynomial" w
-\text{deg}($1)$0
+\deg($1)$0
+endsnippet
+
+snippet Int "interior" w
+\Int($1)$0
+endsnippet
+
+snippet Ext "exterior" w
+\Ext($1)$0
 endsnippet
 
 snippet note "note" w
@@ -157,6 +165,13 @@ snippet note "note" w
 \newtheorem{lemma}{Lemma}[subsection]
 \newtheorem{corollary}{Corollary}[subsection]
 \newtheorem{prop}{Proposition}[subsection]
+
+\DeclareMathOperator{\Arg}{Arg} % Branch argument of complex numbers
+\DeclareMathOperator{\Var}{Var} % variance
+\DeclareMathOperator{\Cov}{Cov} % covariance
+\DeclareMathOperator{\corr}{corr} % correlation
+\DeclareMathOperator{\Int}{Int} % interior
+\DeclareMathOperator{\Ext}{Ext} % exterior
 
 \DeclarePairedDelimiter\abs{\lvert}{\rvert}%
 \DeclarePairedDelimiter\norm{\lVert}{\rVert}%
