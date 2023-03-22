@@ -98,7 +98,7 @@ snippet arg "argument" w
 \arg($1)$0
 endsnippet
 
-snippet Arg "argument" w
+snippet Arg "principle argument" w
 \Arg($1)$0
 endsnippet
 
@@ -132,6 +132,10 @@ endsnippet
 
 snippet Ext "exterior" w
 \Ext($1)$0
+endsnippet
+
+snippet Res "residule" w
+\Res(${1:f},${2:z_0})$0
 endsnippet
 
 snippet note "note" w
@@ -172,6 +176,7 @@ snippet note "note" w
 \DeclareMathOperator{\corr}{corr} % correlation
 \DeclareMathOperator{\Int}{Int} % interior
 \DeclareMathOperator{\Ext}{Ext} % exterior
+\DeclareMathOperator{\Res}{Res} % residule
 
 \DeclarePairedDelimiter\abs{\lvert}{\rvert}%
 \DeclarePairedDelimiter\norm{\lVert}{\rVert}%
