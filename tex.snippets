@@ -70,6 +70,14 @@ snippet tb "textbf" w
 \textbf{$1}$0
 endsnippet
 
+snippet bb "bm" w
+\bm{$1}$0
+endsnippet
+
+snippet bx "\bm{x}" w
+\bm{x}$0
+endsnippet
+
 snippet hat "hat" w
 \hat{$1}$0
 endsnippet
@@ -152,7 +160,7 @@ snippet note "note" w
 \usepackage[flushleft]{threeparttable}
 \usepackage[table]{xcolor}
 \geometry{margin=0.8in}
-%\graphicspath{ {./DE_imgs/} }
+%\graphicspath{ {./xx_imgs/} }
 
 \newtheoremstyle{break}% name
 	{0mm}%         Space above, empty = \`usual value'
@@ -208,4 +216,8 @@ snippet note "note" w
 
 $0
 \end{document}
+endsnippet
+
+snippet v "\vec{x}" w
+\vec{x}
 endsnippet
