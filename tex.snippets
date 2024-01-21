@@ -18,6 +18,26 @@ snippet mbf "mathbf" w
 \mathbf{$1}$0
 endsnippet
 
+snippet bm "bold math" w
+\bm{$1}$0
+endsnippet
+
+snippet bx "\bm{x}" w
+\bm{x}$0
+endsnippet
+
+snippet by "bold y" w
+\bm{y}
+endsnippet
+
+snippet bY "bold Y" w
+\bm{Y}
+endsnippet
+
+snippet bX "bold X" w
+\bm{X}
+endsnippet
+
 snippet mcl "mathcal" w
 \mathcal{$1}$0
 endsnippet
@@ -68,14 +88,6 @@ endsnippet
 
 snippet tb "textbf" w
 \textbf{$1}$0
-endsnippet
-
-snippet bb "bm" w
-\bm{$1}$0
-endsnippet
-
-snippet bx "\bm{x}" w
-\bm{x}$0
 endsnippet
 
 snippet hat "hat" w
@@ -177,7 +189,7 @@ snippet note "note" w
 %\graphicspath{ {./xx_imgs/} }
 
 \newtheoremstyle{break}% name
-	{0mm}%         Space above, empty = \`usual value'
+	{}%         Space above, empty = \`usual value'
 	{}%         Space below
 	{\itshape}% Body font
 	{}%         Indent amount (empty = no indent, \parindent = para indent)
