@@ -2,6 +2,10 @@ snippet ii "inline math" w
 \\($1\\)$0
 endsnippet
 
+snippet ilc "inline code" w
+\lstinline[columns=fixed]{$1}$0
+endsnippet
+
 snippet dd "display math" w
 \[$1\]$0
 endsnippet
@@ -233,11 +237,11 @@ snippet note "note" w
 \DeclareMathOperator{\Int}{Int} % interior
 \DeclareMathOperator{\Ext}{Ext} % exterior
 \DeclareMathOperator{\Res}{Res} % residule
+\DeclareMathOperator{\tr}{tr} % trace
 \DeclareMathOperator*{\argmax}{arg\,max} % argmax
 \DeclareMathOperator*{\argmin}{arg\,min} % argmin
-
-\DeclarePairedDelimiter\abs{\lvert}{\rvert}%
-\DeclarePairedDelimiter\norm{\lVert}{\rVert}%
+\DeclarePairedDelimiter\abs{\lvert}{\rvert} % absolute value
+\DeclarePairedDelimiter\norm{\lVert}{\rVert} % norm
 
 % Swap the definition of \abs* and \norm*, so that \abs
 % and \norm resizes the size of the brackets, and the
